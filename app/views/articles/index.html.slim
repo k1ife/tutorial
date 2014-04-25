@@ -1,25 +1,6 @@
 h1 Listing articles
 
-table
-  thead
-    tr
-      th Title
-      th Body
-      th Published at
-      th
-      th
-      th
-
-  tbody
-    - @articles.each do |article|
-      tr
-        td = article.title
-        td = article.body
-        td = article.published_at
-        td = link_to 'Show', article, :class => 'btn btn-default'
-        td = link_to 'Edit', edit_article_path(article), :class => 'btn btn-primary'
-        td = link_to 'Destroy', article, data: {:confirm => 'Are you sure?'}, :method => :delete, :class => 'btn btn-danger'
-
-br
+div id="articles"
+  = render @articles
 
 = link_to 'New Article', new_article_path, :class => 'btn btn-success'

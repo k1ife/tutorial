@@ -1,15 +1,19 @@
-= form_for([@article, @article.comments.new]) do |f|
-  div class="field"
-    = f.label :name
-    br
-    = f.text_field :name
-  div class="field"
-    = f.label :email
-    br
-    = f.text_field :email
-  div class="field"
-    = f.label :body
-    br
-    = f.text_area :body
-  div class="actions"
-    = f.submit 'Add'
+div class="row"
+  div class="col-lg-6"
+    div.well
+      = form_for([@article, @article.comments.new]) do |f|
+        div class="field"
+          = f.label :name
+          br
+          = f.text_field :name, :class => "form-control"
+        div class="field"
+          = f.label :email
+          br
+          = f.text_field :email, :class => "form-control"
+        div class="field"
+          = f.label :body
+          br
+          = f.text_area :body, :class => "form-control"
+        div class="actions"
+          = f.submit 'Add', :class => "btn btn-success pull-right"
+        br

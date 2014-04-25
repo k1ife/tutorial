@@ -5,20 +5,25 @@
       ul
         - @article.errors.full_messages.each do |message|
           li = message
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :body
-    = f.text_area :body
-  .field
-    = f.label :location
-    = f.text_field :location
-  .field
-    = f.label :excerpt
-    = f.text_field :excerpt
-  .field
-    = f.label :published_at
-    = f.datetime_select :published_at
-  .actions = f.submit 'Save'
+  div class="row"
+    div class="col-lg-6"
+      div class="panel panel-info"
+        div class="panel-heading"
+          |Create new article
+        div class="panel-body"
+          .field
+            = f.label :title
+            = f.text_field :title, :class => "form-control"
+          .field
+            = f.label :body
+            = f.text_area :body, :class => "form-control"
+          .field
+            = f.label :location
+            = f.text_field :location, :class => "form-control"
+          .field
+            = f.label :excerpt
+            = f.text_field :excerpt, :class => "form-control"
+          .field
+            = f.label :published_at
+            = f.datetime_select :published_at
+          .actions = f.submit 'Save', :class => "btn btn-success pull-right"

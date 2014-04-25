@@ -1,9 +1,12 @@
 = div_for comment do
-  h3
-    = comment.name
-    |&lt;
-    = comment.email
-    |&gt; said:
-    span class='actions'
-      = link_to 'Delete', [@article, comment], confirm: 'Are you sure?', method: :delete
-  = comment.body
+  div class="row"
+    div class="col-lg-6"
+      div class="panel panel-default"
+        div class="panel-heading"
+          = comment.name
+          span class="label label-info" style="font-size:70%; vertical-align: text-top;"
+            = comment.email
+          span class='actions'
+            = link_to 'Delete', [@article, comment], confirm: 'Are you sure?', method: :delete, :class => "btn btn-danger btn-xs pull-right"
+        div class="panel-body"
+          = comment.body
