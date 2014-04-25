@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  articles_all: "All articles"
+  article_new:  "New article"
+  article_edit: "Edit article - "

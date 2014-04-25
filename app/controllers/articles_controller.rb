@@ -4,21 +4,25 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    @title = t('articles_all')
     @articles = Article.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @title = @article.long_title
   end
 
   # GET /articles/new
   def new
+    @title = t('article_new')
     @article = Article.new
   end
 
   # GET /articles/1/edit
   def edit
+    @title = 'Редактирование статьи - ' + @article.title
   end
 
   # POST /articles

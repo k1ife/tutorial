@@ -21,3 +21,7 @@
 
 ru:
   hello: "Привет мир!"
+  articles_all: "Все статьи"
+  article_new:  "Новая статья"
+  article_edit: "Редактирование статьи - "
+  
