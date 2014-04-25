@@ -9,6 +9,13 @@ p
 p
   strong Published at:
   = @article.published_at
+  
+hr
+h3 Comments
+div id="comments"
+  =render @article.comments
+  
+= render :file => 'comments/new'
 
 = link_to 'Edit', edit_article_path(@article)
 '|
