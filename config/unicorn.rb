@@ -1,3 +1,4 @@
+# unicorn_rails -c config/unicorn.rb -D -E development
 # Set the working application directory
 # working_directory "/path/to/your/app"
 working_directory "/var/www/tutorial"

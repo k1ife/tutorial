@@ -20,6 +20,7 @@
 capybara-*.html
 .rspec
 /log
+/pids
 /tmp
 /db/*.sqlite3
 /public/system

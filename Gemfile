@@ -17,7 +17,6 @@ gem 'therubyracer',  platforms: :ruby
 gem 'russian'
 gem 'slim'
 gem 'slim-rails'
-# gem 'puma'
 gem 'better_errors'
 
 
