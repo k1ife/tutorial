@@ -68,6 +68,12 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def notify_friend
+    @article = Article.find(params[:id])
+    Notifier.email_friend(@article, params[:name], params[:email]).deliver
+    redirect_to @article, :notice => "Successfully sent a message to ypur friend"
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
