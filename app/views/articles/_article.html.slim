@@ -1,8 +1,9 @@
 = div_for article do
   h3
     = link_to article.title, article
-    span class='pull-right'
-      = link_to "Edit", edit_article_path(article), :class => "btn btn-primary"
-      = link_to "Delete", article, confirm: "Are you sure?", method: :delete, :class => "btn btn-danger"
-  = article.body
+    - if article.owned_by? current_user
+      span class='pull-right'
+        = link_to "Edit", edit_article_path(article), :class => "btn btn-primary"
+        = link_to "Delete", article, confirm: "Are you sure?", method: :delete, :class => "btn btn-danger"
+  = simple_format article.body
   hr
