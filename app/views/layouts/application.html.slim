@@ -8,10 +8,25 @@ html
   body
     a id="move_up" href="#"
       |Вверх
+
     div class="container"
       div class="row"
         div class="col-lg-12"
+        
+          div#header
+            h1
+              = link_to "бЛОГ", root_path
+            div class="user_bar pull-right button-group"
+              - if logged_in?
+                = link_to t('article_new'), new_article_path, :class=>"btn btn-success"
+                = link_to t('edit_pass'), edit_user_path(current_user), :class=>"btn btn-default"
+                = link_to t('logout'), logout_path, :class=>"btn btn-danger"
+              - else
+                = link_to t('login'), login_path, :class=>"btn btn-success"
+          div.clearfix
           = content_tag :p, notice, :class => 'alert alert-info' if notice.present?
           = content_tag :p, alert, :class => 'alert alert-danger' if alert.present?
           
           = yield
+          div#footer
+            |A simple blog built for the book

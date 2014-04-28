@@ -24,4 +24,9 @@ ru:
   articles_all: "Все статьи"
   article_new:  "Новая статья"
   article_edit: "Редактирование статьи - "
+  login : "Вход на сайт"
+  logout : "Выйти"
+  edit_pass : "Изменить пароль"
+  save    : "Сохранить"
+  cancel  : "Отмена"
   
