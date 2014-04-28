@@ -31,4 +31,4 @@
           .field
             = f.label :published_at
             = f.datetime_select :published_at
-          .actions = f.submit 'Save', :class => "btn btn-success pull-right"
+          .actions = submit_or_cancel(f)
