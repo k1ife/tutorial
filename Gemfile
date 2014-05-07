@@ -18,7 +18,7 @@ gem 'russian'
 gem 'slim'
 gem 'slim-rails'
 gem 'better_errors'
-
+gem 'thinking-sphinx'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
